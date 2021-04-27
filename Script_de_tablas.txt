@@ -1,0 +1,19 @@
+import mysql.connector
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="Mavado18*051996",
+  database="examen_final"
+)
+mycursor = mydb.cursor()
+
+mycursor.execute("create table Materia(Id Int Auto_Increment primary key, nombre_Materia Varchar (100))")
+mycursor.execute("create table Carrera (Id Int Auto_Increment primary key, nombre_carrera varchar (40))")
+mycursor.execute("create table Materias_de_Carrera(id_Materia varchar (20), Nombre_Materia_Carrera Varchar (100))")
+mycursor.execute("Create table Estudiantes (Matricula varchar(10), Nombre_Estudiante varchar (50))")
+mycursor.execute("Create table Profesores (Id int Auto_increment primary key, Nombre_Profesor Varchar (100))")
+mycursor.execute("Create table materias_estudiantes (ID INT Auto_Increment primary key, nombre_materia_sesion varchar (100))")
+mycursor.execute("Create table Materias_Profesores(ID_sesion_profesor INT Auto_Increment primary key, nombre_materia_sesion_profesor varchar (100))")
+
+
+
